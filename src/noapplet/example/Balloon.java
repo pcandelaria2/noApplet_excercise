@@ -21,8 +21,8 @@ public class Balloon extends noapplet.NoApplet{
         Dimension d = getSize();
         g.setColor(Color.BLACK);
         g.fillRect(0, 0, d.width, d.height);
-        x+=10;
-        y+=10;
+        x+=5;
+        y+=5;
         g.setColor(Color.green);
         g.fillOval(0,0,x,y);
 
