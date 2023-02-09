@@ -12,8 +12,13 @@ import java.util.Random;
 public class main extends AnimationNoApplet {
 
     public static void main(String[] args) {
+
+
+    }
+    @Override
+    public void paintComponent(Graphics g) {
         sun Sun = new sun(20,20,20,Color.yellow);
-        Sun.draw();
+        Sun.draw(g);
     }
 }
 class sun extends AnimationNoApplet {
@@ -22,7 +27,7 @@ class sun extends AnimationNoApplet {
     private int radius;
     private Color color;
 
-    private final List<planet> planets;
+    //private final List<planet> planets;
 
     public sun(int x, int y, int radius, Color color){
         this.x = x;
@@ -30,14 +35,13 @@ class sun extends AnimationNoApplet {
         this.radius = radius;
         this.color = color;
 
-        planets = new ArrayList<>();
-        planets.add(new planet(40,10,0,10,Color.orange, S));
+        //planets = new ArrayList<>();
+        //planets.add(new planet(40,10,0,10,Color.orange, S));
     }
 
     public void draw(Graphics g){
         g.setColor(color);
         g.fillOval(x-radius,y-radius,radius*2, radius*2);
-
 
     }
 
