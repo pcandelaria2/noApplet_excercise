@@ -12,7 +12,7 @@ import java.util.Random;
 public class main extends AnimationNoApplet {
 
     public static void main(String[] args) {
-
+        new sun(20,20,20,Color.yellow).run();
 
     }
     @Override
