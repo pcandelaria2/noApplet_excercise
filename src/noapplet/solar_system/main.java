@@ -3,7 +3,6 @@ package noapplet.solar_system;
 
 import noapplet.example.AnimationNoApplet;
 
-import javax.swing.*;
 import java.awt.*;
 import java.util.ArrayList;
 import java.util.List;
@@ -21,6 +20,9 @@ public class main extends AnimationNoApplet {
     }
     @Override
     public void paintComponent(Graphics g) {
+        // fill the background
+        g.setColor(Color.BLACK);
+        g.fillRect(0, 0, dim.width, dim.height);
         Sun.draw(g);
     }
 }
@@ -39,10 +41,11 @@ class sun extends AnimationNoApplet {
         this.color = color;
 
         //planets = new ArrayList<>();
-        //planets.add(new planet(40,10,0,10,Color.orange, S));
+        //planets.add(new planet(40,10,0,10,Color.orange, Sun));
     }
 
     public void draw(Graphics g){
+
         g.setColor(color);
         g.fillOval(x-radius,y-radius,radius*2, radius*2);
 
