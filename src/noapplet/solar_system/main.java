@@ -10,14 +10,17 @@ import java.util.List;
 import java.util.Random;
 
 public class main extends AnimationNoApplet {
-
+    sun Sun;
     public static void main(String[] args) {
-        new sun(20,20,20,Color.yellow).run();
+        new main().run();
 
     }
     @Override
+    public void initAnimation(){
+        Sun = new sun(20,20,20,Color.yellow);
+    }
+    @Override
     public void paintComponent(Graphics g) {
-        sun Sun = new sun(20,20,20,Color.yellow);
         Sun.draw(g);
     }
 }
