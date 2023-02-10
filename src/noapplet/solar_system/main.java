@@ -16,7 +16,7 @@ public class main extends AnimationNoApplet {
     }
     @Override
     public void initAnimation(){
-        Sun = new sun(20,20,20,Color.yellow);
+        Sun = new sun(40,40,40,Color.yellow);
     }
     @Override
     public void paintComponent(Graphics g) {
@@ -26,12 +26,11 @@ public class main extends AnimationNoApplet {
         Sun.draw(g);
     }
 }
-class sun extends AnimationNoApplet {
+class sun extends AnimationNoApplet{
     private int x;
     private int y;
     private int radius;
     private Color color;
-
     //private final List<planet> planets;
 
     public sun(int x, int y, int radius, Color color){
@@ -41,14 +40,17 @@ class sun extends AnimationNoApplet {
         this.color = color;
 
         //planets = new ArrayList<>();
-        //planets.add(new planet(40,10,0,10,Color.orange, Sun));
+        //planets.add(new planet(40,10,20,10, Color.BLUE, Sun));
     }
 
     public void draw(Graphics g){
 
         g.setColor(color);
-        g.fillOval(x-radius,y-radius,radius*2, radius*2);
+        g.fillOval(x - radius,y - radius,radius * 2, radius * 2);
 
+        /*for( var p : planets){
+            p.draw(g);
+        }*/
     }
 
 
@@ -71,6 +73,9 @@ class planet{
         this.Sun = Sun;
 
     }
+
+
+
     public void draw(Graphics g){
         var ran = new Random();
         var x = ran.nextInt(distance);
@@ -79,7 +84,7 @@ class planet{
         x = calX() + x;
 
         g.setColor(color);
-        g.fillOval(x-radius,y-radius, radius*2,radius*2);
+        g.fillOval(x - radius,y - radius, radius * 2,radius * 2);
     }
     private int calX() {
         int center = dim.width / 2;   // dim: dimension of this planet
