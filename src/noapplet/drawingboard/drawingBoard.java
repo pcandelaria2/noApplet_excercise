@@ -14,7 +14,7 @@ public class drawingBoard extends NoApplet {
     public void init(){
         shapes = new ArrayList<>();
         shapes.add(new circle(10, 10, Color.blue));
-        //shapes.add(new rectangle(10,30, Color.red));
+        shapes.add(new rectangle(10,30, Color.red));
         //shapes.add(new triangle());
 
     }
