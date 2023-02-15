@@ -10,11 +10,12 @@ public class drawingBoard extends NoApplet {
     public static void main(String[] args){
         new drawingBoard().run();
     }
+
     @Override
     public void init(){
         shapes = new ArrayList<>();
-        shapes.add(new circle(10, 10, Color.blue));
-        shapes.add(new rectangle(10,30, Color.red));
+        shapes.add(new circle(10, 10, Color.BLUE));
+        shapes.add(new rectangle(10,30, Color.RED));
         //shapes.add(new triangle());
 
     }

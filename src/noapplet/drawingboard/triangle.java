@@ -2,13 +2,14 @@ package noapplet.drawingboard;
 
 import java.awt.*;
 
-public class rectangle  extends Shape{
-    protected rectangle(int x, int y, Color c) {
+public abstract class triangle extends Shape{
+    protected triangle(int x, int y, Color c) {
         super(x, y, c);
     }
 
+    @Override
     public void draw(Graphics g) {
         g.setColor(getColor());
-        g.drawRect(getX()+20,getY()+20,getX(),getY());
+
     }
 }
